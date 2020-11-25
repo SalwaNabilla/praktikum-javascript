@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz3NZuu4JCIhfWbR0iFdyfiGVfzvZurqj1Jw&usqp=CAU);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            background :rgba(225, 225, 225, 0.7);
+            border-radius :5px;
+            box-shadow :0 2px 5px rgba (0,0,0,0);
+            width :400px;
+            min-width :100px;
+            overflow: hidden;   
+        }
+        fieldset {
+            background-color: #fff;
+
+        }
+        .form {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+   <fieldset>
+    <form id="form" class="form">
+        <label for="">Nama Pelanggan </label><br>
+        <input type="text"  id="nama" placeholder="Masukkan Nama" required = ""><br><br>
+        <label for="">Email</label><br>
+        <input type="email" id="email" placeholder="Masukkan Email" required = ""><br><br>
+        <label for="">Jam Keberangkatan</label><br>
+        <input type="time"  id="waktu"><br><br>
+        <label for="">Tujuan Keberangkatan</label><br>
+        <input type="text"  id="tujuan" placeholder="Tujua Anda" required = ""><br><br>
+        <label for="">Jumlah Tiket</label><br>
+        <input type="number"  id="tiket"><br><br>
+        <button type="submit" onclick="return validasi ()">Submit</button>
+    </form>
+</div>
+</fieldset>
+<p id="teks"></p>
+    <script src="validasi.js"></script>
+</body>
+</html>

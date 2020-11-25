@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+            <title>Image Picker</title>
+            <script>
+                function pilih(){
+                    let list_karakter = document.getElementById ("karakter");
+                    let idx = list_karakter.selectedIndex;
+                    let area_gambar = document.getElementById ("gambar");
+                    area_gambar.src = "image/" + list_karakter[idx].value  +  ".jpg";
+                    alert ("karakter ini adalah " + list_karakter[idx].value + ".jpg");
+                    }
+             </script>
+    </head>
+    <body>
+        <center>
+        <form id="frm1">
+           Pilih karakter <select id="karakter" onchange="pilih()">
+               <option value="dekisugi">Dekisugi</option>
+               <option value="doraemon">Doraemon</option>
+               <option value="dorami">Dorami</option>
+               <option value="giant">Giant</option>
+               <option value="nobita">Nobita</option>
+               <option value="pippo">Pippo</option>
+               <option value="pisuke">Pisuke</option>
+               <option value="shizuka">Shizuka</option>
+               <option value="suneo">Suneo</option>
+           </select>
+        </form>
+        <br> <br>
+        <img src="image/dekisugi.jpg" alt="gambar karakter" id="gambar" border="1px" >
+    </center>
+    </body>
+</html>

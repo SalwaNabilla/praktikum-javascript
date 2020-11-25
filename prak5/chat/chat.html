@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+</head>
+<body>
+    <style>
+        body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOvlJxb-6T6to6v_P1NZu97GJL-DrBveL-tA&usqp=CAU);
+            font-family: sans-serif;
+            text-align: left
+            
+        }
+        h1 {
+            text-align: center;
+            background-color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+            
+        }
+        #pesan {
+            width: 50%;
+            height: 35px;
+        }
+        #submit{
+            width: 5%;
+        }
+    </style>
+    <h1><b>Fitur Chat Sederhana</b></h1>
+    <br><br>
+	<div style="width: 100%; stroke: black;" id="isi">
+		
+	</div>
+	<form method="REQUEST" onsubmit="return kirim();">
+		<input id="pesan" type="text" name="pesan">
+		<button id = "submit" type="submit" onclick="return kirim();">SEND</button>
+	</form>
+	
+</body>
+<script>
+	function kirim() {
+		let pesan = document.getElementById("pesan").value;
+		document.getElementById("isi").innerHTML += pesan + "<br/>";
+		document.getElementById("pesan").value = "";
+		return false;
+	}
+</script>
+</html>

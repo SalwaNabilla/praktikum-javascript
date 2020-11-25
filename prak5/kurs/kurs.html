@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Kurs Rupiah</title>
+</head>
+<body>
+    <h1><b>KONVERSI MATA UANG </b></h1>
+    <br><br><br><br>
+	<center>
+		<table border="1" style="width: 30%" id="tabel">
+			<tr style="text-align: center;" >
+				<td><b>Masukkan Nilai</b></td>
+				<td><b>Valas</b></td>
+				<td><b>Nilai Rupiah</b></td>
+			</tr>
+			<tr>
+				<td><input onkeyup="kurs()" style="width: 90%" placeholder="Masukan Nilai" type="text" name="nilai" id="nilai"></td>
+				<td>
+				<select onchange="kurs()" id="kurs" style="width: 90%" >
+					<option value="1">Dollar US</option>
+					<option value="2">Dollar Singapore</option>
+					<option value="3">Ringgit Malaysia</option>
+					<option value="4">Yen Jepang</option>
+					<option value="5">Euro</option>
+                    <option value="6">Riyal Arab Saudi</option>
+                    <option value="7">Won Korea Selatan</option>
+                    <option value="8">Baht Thailand </option>
+				</select></td>
+				<td><input type="text" disabled="" id="rupiah" placeholder="Nilai Rupiah" style="width: 90%" name="rupiah"></td>
+			</tr>
+		</table>
+    </center>
+    <style>
+        #tabel{
+            background-color: 	#E6E6FA ;
+
+        }
+        body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS82DtDnvQ98B9TXjMej_106FPjEczQVahceg&usqp=CAU);
+        }
+        h1{
+            color: 	#708090;
+            background-color: white;
+            text-align: center;
+        }
+    </style>
+</body>
+<script type="text/javascript">
+	function kurs() {
+
+		let konversi = document.getElementById("kurs").value;
+
+		if (konversi == 1) {
+			input = document.getElementById("nilai").value;
+			nilai = 9915;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp. ' + hitung + ',-';
+		}else if (konversi == 2) {
+			input = document.getElementById("nilai").value;
+			nilai = 13472;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp. ' + hitung + ',-';
+		}else if (konversi == 3) {
+			input = document.getElementById("nilai").value;
+			nilai = 874;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp. ' + hitung + ',-';
+		}else if (konversi == 4) {
+			input = document.getElementById("nilai").value;
+			nilai = 120;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp. ' + hitung + ',-';
+		}else if (konversi == 5) {
+			input = document.getElementById("nilai").value;
+			nilai = 15888;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp. ' + hitung + ',-';
+		}else if (konversi == 6) {
+			input = document.getElementById("nilai").value;
+			nilai = 3592;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp. ' + hitung + ',-';
+		}else if (konversi == 7) {
+			input = document.getElementById("nilai").value;
+			nilai = 12.75;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp. ' + hitung + ',-';
+        }else if (konversi == 8) {
+			input = document.getElementById("nilai").value;
+			nilai = 467.28;
+			hitung = nilai * input;
+			document.getElementById("rupiah").value = 'Rp. ' + hitung + ',-';
+	}
+    }
+</script>
+</html>
